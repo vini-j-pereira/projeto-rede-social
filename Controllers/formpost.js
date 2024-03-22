@@ -26,7 +26,7 @@ export class FormPost {
         </div>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nihil ducimus nesciunt officia voluptatem voluptate quas quaerat obcaecati odit commodi sit doloremque officiis quis doloribus, ratione assumenda nulla aliquam aut!
+            ${this.textarea.value}
         </p>
 
         <div class="action-btn-post">
@@ -47,6 +47,7 @@ export class FormPost {
         </div>
             `;
             this.ulPost.append(newPost);
+            this.textarea.value = "";
 
         }
 
