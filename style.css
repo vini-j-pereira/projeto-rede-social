@@ -42,7 +42,7 @@ div.new-post{
 
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 }
 
 div.info-user{
@@ -58,8 +58,171 @@ div.img-user{
     background-color: #333;
 }
 
-main strong{
+main strong.name-profile{
     font-size: 16px;
     margin-left: 10px;
     color: #23A0ff;
+}
+
+form.form-post{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+form.form-post textarea{
+    height: 90px;
+   background-color: #f1f1f1;
+   margin: 15px 0;
+   padding: 25px;
+   border-radius: 10px; 
+   resize: none;
+   outline: none;
+   border: 0;
+   font-family: "Roboto", sans-serif;
+   font-weight: bold;
+   color: #727272;
+}
+
+div.icons-and-btn{
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+}
+
+div.icons-and-btn button{
+   outline: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   margin-right: 10px;
+   border: 0;
+   cursor: pointer; 
+
+}
+
+form div.icons{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form button.btn-sub-form{
+    border-radius: 10px;
+    padding: 10px 50px;
+    background-color: #0492ff;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: background .2s;
+}
+
+form button.btn-sub-form:hover{
+    background-color: rgba(8, 138, 236);
+}
+
+ul li.posts-list{
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.05);
+
+}
+
+ul li div.info-user-post{
+    display: flex;
+    align-items: center;
+}
+
+ul li div.info-user-post div.name-hour{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+li div.img-user-post{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #23A0ff;
+}
+
+ul li div.info-user-post div.name-hour > strong{
+    color: #23A0ff;
+
+}
+
+ul li div.info-user-post div.name-hour > p{
+   color: #d1d1d1; 
+   font-size: 12px;
+   margin-top: 0;
+}
+
+ul li.posts-list p{
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #727272;
+}
+
+ul li div.action-btn-post{
+    display: flex;
+    align-items: center;
+    
+}
+
+ul li div.action-btn-post > button{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background .2s;
+
+}
+
+ul li div.action-btn-post > button img{
+    margin-right: 5px;
+}
+
+.files-post-like{
+    background-color: #ff6b6b;
+}
+
+.files-post-like:hover{
+    background-color: rgb(248, 75, 75);
+}
+
+.files-post-comment{
+    background-color: #ffc320;
+}
+
+.files-post-comment:hover{
+    background-color: #f8b80a;
+}
+
+.files-post-share{
+    background-color: #3baaff;
+}
+
+.files-post-share:hover{
+    background-color: #0091ff;
 }
