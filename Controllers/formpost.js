@@ -10,10 +10,25 @@ export class FormPost {
         this.form.addEventListener('submit', func)
     }
 
+    formValidate(value){
+       if (value === '' || value === null || value === undefined || value.length < 3){
+        return false
+       }
+       return true
+    }
+
+    getTime(){
+        const time = new Date();
+        const hour = time.getHours();
+        const minutes = time.getMinutes();
+        return `${hour}h ${minutes}min`
+    }
+
     addSubmit(){
         const handleSubimit = (event) => {
             event.preventDefault();
-            
+            if(this.formValidate(this.textarea.value)){
+            const time = this.getTime();
             const newPost = document.createElement('li');
             newPost.classList.add('posts-list');
             newPost.innerHTML = `
@@ -21,7 +36,7 @@ export class FormPost {
             <div class="img-user-post"></div>
             <div class="name-hour">
                 <strong>Vinicius Jose</strong>
-                <p>21h</p>
+                <p>${time}</p>
             </div>
         </div>
 
@@ -49,6 +64,9 @@ export class FormPost {
             this.ulPost.append(newPost);
             this.textarea.value = "";
 
+            }else {
+                alert('Verifique o campo digitado.')
+            }
         }
 
         this.onSubmit(handleSubimit);
